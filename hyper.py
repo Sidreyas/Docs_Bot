@@ -86,7 +86,7 @@ def user_input(user_question):
 
 
 def main():
-    st.header("Chat with PDF using Gemini")
+    st.header("GEN-E")
 
     user_question = st.text_input("Ask a Question from the PDF Files")
 
