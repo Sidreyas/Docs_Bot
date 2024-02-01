@@ -104,6 +104,19 @@ def main():
                 st.success("Done")
 
 
+ store_data = ""
+    with st.chat_message("assistant"):
+        for chunk in response:
+            result = chunk.text
+            store_data += result 
+            response = result
+            # Display assistant response in chat message container
+            
+            st.markdown(response)
+    # Add assistant response to chat history
+    st.session_state.messages.append({"role": "assistant", "content": store_data})
+
+
 
 if __name__ == "__main__":
     main()
